@@ -24,8 +24,12 @@ function renderizarTrending(lista, idContenedor) {
   }).join("");
 }
 
-const trending = productos.filter(p => p.trending);
-renderizarTrending(trending, "trending");
+async function iniciar() {
+  await cargarProductos();
+  renderizarTrending(productos.filter(p => p.trending), "trending");
+  // si usás actualizarFlechas(), llamala acá también
+}
+iniciar();
 
 // 2. Scroll horizontal con las flechas
 const track = document.getElementById("trending");

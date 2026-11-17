@@ -22,7 +22,13 @@ function renderizarProductos(lista, idContenedor, claseCard) {
   }).join("");
 }
 
-renderizarProductos(productos.filter(p => p.coleccion === "spring").slice(0, 4), "contenedor-spring", "product-card-spring");
-renderizarProductos(productos.filter(p => p.categoria === "men").slice(0, 4), "contenedor-men", "product-card");
-renderizarProductos(productos.filter(p => p.categoria === "women").slice(0, 4), "contenedor-women", "product-card");
-renderizarProductos(productos.filter(p => p.categoria === "accessories").slice(0, 4), "contenedor-accessories", "product-card");
+async function iniciar() {
+  await cargarProductos();
+
+  renderizarProductos(productos.filter(p => p.coleccion === "spring").slice(0, 4), "contenedor-spring", "product-card-spring");
+  renderizarProductos(productos.filter(p => p.categoria === "men").slice(0, 4), "contenedor-men", "product-card");
+  renderizarProductos(productos.filter(p => p.categoria === "women").slice(0, 4), "contenedor-women", "product-card");
+  renderizarProductos(productos.filter(p => p.categoria === "accessories").slice(0, 4), "contenedor-accessories", "product-card");
+}
+
+iniciar();

@@ -1,1 +1,6 @@
 
+[
+  { "id": 1, "nombre": "Ferrari Jacket", "precio": 120000, "imagen": "img/sale 2.jpg", "categoria": "men",   "coleccion": "spring", "trending": true },
+  { "id": 2, "nombre": "Leather Jacket", "precio": 98000,  "imagen": "img/sale 3.jpg", "categoria": "women", "coleccion": "spring", "trending": true },
+  { "id": 3, "nombre": "Tanktop",        "precio": 18000,  "imagen": "img/sale 4.jpg", "categoria": "women", "coleccion": "spring", "trending": true }
+]

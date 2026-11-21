@@ -2,7 +2,7 @@ let productos = [];
 
 async function cargarProductos() {
   try {
-    const respuesta = await fetch("productos.json");
+    const respuesta = await fetch("../js/productos.json");
     if (!respuesta.ok) {
       throw new Error("Error HTTP " + respuesta.status);
     }

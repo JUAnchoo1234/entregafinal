@@ -8,7 +8,7 @@ function renderizarTrending(lista, idContenedor) {
 
   contenedor.innerHTML = lista.map(function (producto) {
     return `
-      <a href="productos.html#${producto.categoria}" class="product-card">
+      <a href="html/productos.html#${producto.categoria}" class="product-card">
         <div class="img-container">
           <img src="${producto.imagen}" alt="${producto.nombre}">
         </div>

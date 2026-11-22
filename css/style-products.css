@@ -429,6 +429,11 @@
 
 }
 .whatsapp-btn{
-    height:32;
-    width: 32;
+  display:flex;
+  justify-content: flex-end;
+
+}
+.what-img{
+  width:50px;
+  
 }

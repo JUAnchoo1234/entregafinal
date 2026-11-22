@@ -7,20 +7,20 @@ function renderizarTrending(lista, idContenedor) {
   }
 
   contenedor.innerHTML = lista.map(function (producto) {
-    return `
-      <a href="html/productos.html#${producto.categoria}" class="product-card">
-        <div class="img-container">
-          <img src="${producto.imagen}" alt="${producto.nombre}">
-        </div>
-        <div class="product-info">
-          <h3>${producto.nombre.toUpperCase()}</h3>
-          <p class="price">$${producto.precio.toLocaleString("es-AR")}</p>
-        </div>
-         <button class="card-button" data-id="${producto.id}">AGREGAR AL CARRITO</button>
-        <div class="card-info">
-        </div>
-      </a>
-    `;
+   return `
+  <article class="product-card">
+    <a href="html/productos.html#${producto.categoria}" class="product-link">
+      <div class="img-container">
+        <img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy">
+      </div>
+      <div class="product-info">
+        <h3>${producto.nombre.toUpperCase()}</h3>
+        <p class="price">$${producto.precio.toLocaleString("es-AR")}</p>
+      </div>
+    </a>
+    <button class="card-button" data-id="${producto.id}">AGREGAR AL CARRITO</button>
+  </article>
+`;
   }).join("");
 }
 
